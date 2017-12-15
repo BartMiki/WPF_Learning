@@ -31,6 +31,7 @@ namespace WPF_Learning
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             label_new.Content = Counter++;
+            textBlock.Text += "Wywołał mnie: " + sender.ToString() +"\n";
         }
     }
 }
