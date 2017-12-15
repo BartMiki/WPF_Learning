@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Button x:Name="add" Margin="10,10,10,10" Click="Add_Click" VerticalAlignment="Top">Przycisk</Button>
+        <Label x:Name ="label_new" Content="Label" Margin="10,10,10,10" VerticalAlignment="Center"/>
     </Grid>
 </Window>

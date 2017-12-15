@@ -20,9 +20,17 @@ namespace WPF_Learning
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int Counter { get; private set; }
+
         public MainWindow()
         {
             InitializeComponent();
+            Counter = 0;
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            label_new.Content = Counter++;
         }
     }
 }
