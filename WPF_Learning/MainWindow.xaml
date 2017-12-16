@@ -45,9 +45,10 @@
                 Circle Draw
             </Button>
         </Grid>
-        
-        <TextBlock x:Name="textBlock" Padding="5" FontSize="12" FontFamily="Comic Sans MS" Margin="10,10,10,10" Grid.Row="1" Grid.Column="2" Background="Silver">
-        </TextBlock>
+        <ScrollViewer Grid.Row="1" Grid.Column="2" VerticalScrollBarVisibility="Visible">
+            <TextBlock x:Name="textBlock" Padding="5" FontSize="12" FontFamily="Comic Sans MS" Margin="10,10,10,10" Background="Silver">
+            </TextBlock>
+        </ScrollViewer>
         <TextBox Grid.Row="1" Padding="5" Margin="10" Background="Beige" TextWrapping="Wrap">
             Wpisz tu co chcesz :D
         </TextBox>

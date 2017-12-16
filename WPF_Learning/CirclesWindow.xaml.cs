@@ -44,8 +44,6 @@ namespace WPF_Learning
                         Height = height,
                         Width = width,
                         Fill = Brushes.Black,
-                        //HorizontalAlignment = HorizontalAlignment.Center,
-                        //VerticalAlignment = VerticalAlignment.Center
                     };
                     ellipseList.Add(ellipse);
                 }
