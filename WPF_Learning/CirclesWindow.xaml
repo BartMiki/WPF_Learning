@@ -1,0 +1,26 @@
+﻿<Window x:Class="WPF_Learning.CirclesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Learning"
+        mc:Ignorable="d"
+        Title="CirclesWindow" Height="700" Width="600">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="2">Wpisz liczbę wierzchołków:</Label>
+                <TextBox x:Name="vertexInput" Margin="2" Width="50" VerticalContentAlignment="Center"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="2">Wpisz promień:</Label>
+                <TextBox x:Name="radiousInput" Margin="2" Width="50" VerticalContentAlignment="Center"></TextBox>
+            </StackPanel>
+            <Button Margin="5" x:Name="Confirm" Click="Confirm_Click">Potwierdź</Button>
+            <Button Margin="5" x:Name="ClearButton" Click="ClearButton_Click">Wyczyść</Button>
+        </StackPanel>
+        <Canvas DockPanel.Dock="Top" Width="600" Height="600" x:Name="canva">
+
+        </Canvas>
+    </DockPanel>
+</Window>

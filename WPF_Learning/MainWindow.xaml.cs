@@ -45,5 +45,11 @@ namespace WPF_Learning
             var stacWarpWin = new Stack_Wrap_Window();
             stacWarpWin.Show();
         }
+
+        private void Circle_Draw_Click(object sender, RoutedEventArgs e)
+        {
+            var cw = new CirclesWindow();
+            cw.Show();
+        }
     }
 }
