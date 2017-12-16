@@ -11,19 +11,29 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <UniformGrid Rows="1" Columns="2">
+        <UniformGrid Rows="1" Columns="3">
             <Grid  Margin="4,4,2,2" Background="White">
                 <Label VerticalAlignment="Top" HorizontalAlignment="Center">
                     StackPanel
                 </Label>
             </Grid>
-            <Grid  Margin="2,4,4,2" Background="White">
+            <Grid  Margin="2,4,2,2" Background="White">
                 <Label VerticalAlignment="Top" HorizontalAlignment="Center">
                     WrapPanel
                 </Label>
             </Grid>
+            <Grid Margin="2,4,4,2" Background="White" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                    DockPanel
+                </Label>
+                <CheckBox IsChecked="True"  x:Name="setToFill" VerticalContentAlignment="Center" Padding="3" Grid.Column="1" Unchecked="setToFill_Unchecked" Checked="setToFill_Checked">Last Child Fill?</CheckBox>
+            </Grid>
         </UniformGrid>
-        <UniformGrid Grid.Row="1" Columns="2">
+        <UniformGrid Grid.Row="1" Columns="3">
             <StackPanel Margin="4,2,2,4" Background="White" Orientation="Vertical">
                 <Button Width="50">1</Button>
                 <Button Width="70">2</Button>
@@ -31,13 +41,20 @@
                 <Button Width="45">4</Button>
                 <Button Width="120">5</Button>
             </StackPanel>
-            <WrapPanel Margin="2,2,4,4" Background="White">
+            <WrapPanel Margin="2,2,2,4" Background="White">
                 <Button Width="50">1</Button>
                 <Button Width="70">2</Button>
                 <Button Width="150">3</Button>
                 <Button Width="45">4</Button>
                 <Button Width="120">5</Button>
             </WrapPanel>
+            <DockPanel x:Name="myDock" Margin="2,2,4,4" Background="White">
+                <Button DockPanel.Dock="Top">Top</Button>
+                <Button DockPanel.Dock="Bottom">Bottom</Button>
+                <Button DockPanel.Dock="Right">Right</Button>
+                <Button DockPanel.Dock="Left">Left</Button>
+                <Button >Center</Button>
+            </DockPanel>
         </UniformGrid>
     </Grid>
 </Window>

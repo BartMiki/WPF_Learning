@@ -23,5 +23,16 @@ namespace WPF_Learning
         {
             InitializeComponent();
         }
+
+        private void setToFill_Checked(object sender, RoutedEventArgs e)
+        {
+            if(myDock != null)
+                myDock.LastChildFill = true;
+        }
+
+        private void setToFill_Unchecked(object sender, RoutedEventArgs e)
+        {
+            myDock.LastChildFill = false;
+        }
     }
 }
