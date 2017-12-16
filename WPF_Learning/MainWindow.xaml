@@ -9,21 +9,29 @@
     <Grid Background="DarkSlateBlue">
         <!-- Definicja Wierszy i wiersz -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="2.4*"/>
             <!-- * oznacza, że eleenty mają proporcjonalne długości, z pozostałych do wykorzystania -->
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <!-- Auto dopasowuje rozmiar do wymiarów obiektu który się znajduje w tym wierszu i kolumnie-->
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="add" Click="Add_Click" Margin="15" Padding="10">
-            <Image Grid.Column="0" Source="images\base_image.png"/>
+        <Button x:Name="add" Click="Add_Click" Margin="7" Padding="4">
+            <TextBox Background="Transparent" TextWrapping="Wrap" TextAlignment="Center" FontSize="15">
+                Kliknij mnie!
+            </TextBox>
         </Button>
-        <Label Grid.Column="1" x:Name ="label_new" Content="Label" Background ="AliceBlue" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:Name="textBlock" Padding="5" FontSize="12" FontFamily="Comic Sans MS" Margin="10,10,10,10" Grid.Row="1" Grid.ColumnSpan="2" Background="Silver">
-
+        <Label Grid.Column="1" x:Name ="label_new" Margin="5" Padding ="5" FontSize="30" Background ="AliceBlue" HorizontalAlignment="Center" VerticalAlignment="Center">
+            Liczba kliknięć
+        </Label>
+        <TextBlock x:Name="textBlock" Padding="5" FontSize="12" FontFamily="Comic Sans MS" Margin="10,10,10,10" Grid.Row="1" Grid.Column="2" Background="Silver">
         </TextBlock>
+        <TextBox Grid.Row="1" Padding="5" Margin="10" Background="Beige" TextWrapping="Wrap">
+            Ten tekst się nie zmienia
+        </TextBox>
+        <GridSplitter Width="2" Grid.RowSpan="2" Background="BlanchedAlmond"/>
+        <GridSplitter Height="2" HorizontalAlignment="Stretch"  Grid.ColumnSpan="2" VerticalAlignment="Bottom" />
     </Grid>
 </Window>
