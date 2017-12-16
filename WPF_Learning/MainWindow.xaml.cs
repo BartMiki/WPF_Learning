@@ -25,13 +25,19 @@ namespace WPF_Learning
         public MainWindow()
         {
             InitializeComponent();
-            Counter = 0;
+            Counter = 1;
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             label_new.Content = Counter++;
             textBlock.Text += "Wywołał mnie: " + sender.ToString() +"\n";
+        }
+
+        private void Kalkulator_button_Click(object sender, RoutedEventArgs e)
+        {
+            var calc = new CalculatorWindow();
+            calc.Show();
         }
     }
 }
