@@ -39,5 +39,11 @@ namespace WPF_Learning
             var calc = new CalculatorWindow();
             calc.Show();
         }
+
+        private void Stac_Wrap_Panel_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var stacWarpWin = new Stack_Wrap_Window();
+            stacWarpWin.Show();
+        }
     }
 }

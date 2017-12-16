@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Learning"
         mc:Ignorable="d"
-        Title="CalculatorWindow" Height="500" Width="400">
+        Title="CalculatorWindow" Height="350" Width="350">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -25,8 +25,8 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="TextBox" Padding="2" Text="" TextAlignment="Right"/>
-            <TextBlock x:Name="OperationField" Grid.Row="1" Padding="2" Text="" FontSize="8" VerticalAlignment="Bottom" TextAlignment="Right"/>
+            <TextBlock x:Name="TextBox" Padding="2" Text="" TextAlignment="Right" FontSize="14"/>
+            <TextBlock x:Name="OperationField" Grid.Row="1" Padding="2" Text="" FontSize="10" VerticalAlignment="Bottom" TextAlignment="Right"/>
         </Grid>
         <Button Grid.Column="4" Grid.Row="0" Content="=" Margin="7" Click="Equal_Click"/>
         <Button Grid.Column="0" Grid.Row="1" Content="7" Margin="7" Click="Bttn_7_Click"/>

@@ -38,7 +38,9 @@
             <Button x:Name="Kalkulator_button" Margin="10" Click="Kalkulator_button_Click">
                 Kalkulator
             </Button>
-            
+            <Button x:Name="Stac_Wrap_Panel_Button" Grid.Column="1" Margin="10" Click="Stac_Wrap_Panel_Button_Click">
+                Stack i Wrap Panel
+            </Button>
         </Grid>
         
         <TextBlock x:Name="textBlock" Padding="5" FontSize="12" FontFamily="Comic Sans MS" Margin="10,10,10,10" Grid.Row="1" Grid.Column="2" Background="Silver">
