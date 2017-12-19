@@ -20,18 +20,9 @@ namespace WPF_Learning
     /// </summary>
     public partial class MainWindow : Window
     {
-        public int Counter { get; private set; }
-
         public MainWindow()
         {
             InitializeComponent();
-            Counter = 1;
-        }
-
-        private void Add_Click(object sender, RoutedEventArgs e)
-        {
-            label_new.Content = Counter++;
-            textBlock.Text += "Wywołał mnie: " + sender.ToString() +"\n";
         }
 
         private void Kalkulator_button_Click(object sender, RoutedEventArgs e)
@@ -50,6 +41,22 @@ namespace WPF_Learning
         {
             var cw = new CirclesWindow();
             cw.Show();
+        }
+
+        private void Eventy_i_delegaty_Click(object sender, RoutedEventArgs e)
+        {
+            var delegatyWin = new EventyDelegatyWindow();
+            delegatyWin.Show();
+        }
+
+        private void ButtonToChangeBindings_Click(object sender, RoutedEventArgs e)
+        {
+            writeToIt.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void ButtonToClearBindings_Click(object sender, RoutedEventArgs e)
+        {
+            writeToIt.Text = "";
         }
     }
 }

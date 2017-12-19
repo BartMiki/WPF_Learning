@@ -57,6 +57,9 @@
     <Compile Include="CirclesWindow.xaml.cs">
       <DependentUpon>CirclesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EventyDelegatyWindow.xaml.cs">
+      <DependentUpon>EventyDelegatyWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Stack_Wrap_Window.xaml.cs">
       <DependentUpon>Stack_Wrap_Window.xaml</DependentUpon>
     </Compile>
@@ -65,6 +68,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CirclesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventyDelegatyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

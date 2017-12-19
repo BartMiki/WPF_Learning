@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Learning", "WPF_Learning\WPF_Learning.csproj", "{302A6D18-121D-4CFB-B386-3D074BA2E143}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_Event_Delegate", "Console_Event_Delegate\Console_Event_Delegate.csproj", "{8FA3EE43-45CF-497B-8F7B-771F62F1D548}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{302A6D18-121D-4CFB-B386-3D074BA2E143}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{302A6D18-121D-4CFB-B386-3D074BA2E143}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{302A6D18-121D-4CFB-B386-3D074BA2E143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA3EE43-45CF-497B-8F7B-771F62F1D548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA3EE43-45CF-497B-8F7B-771F62F1D548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA3EE43-45CF-497B-8F7B-771F62F1D548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA3EE43-45CF-497B-8F7B-771F62F1D548}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
