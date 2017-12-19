@@ -19,7 +19,7 @@
                     Circle Draw
                 </Button>
                 <Button x:Name="Eventy_i_delegaty" Margin="10" Click="Eventy_i_delegaty_Click">
-                    Eventy i delegaty
+                    DataContext
                 </Button>
             </UniformGrid>
             <Expander Margin="5">

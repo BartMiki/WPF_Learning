@@ -17,11 +17,24 @@ namespace WPF_Learning
     /// <summary>
     /// Interaction logic for EventyDelegatyWindow.xaml
     /// </summary>
-    public partial class EventyDelegatyWindow : Window
+    public partial class DataContext : Window
     {
-        public EventyDelegatyWindow()
+        private InkEditingModes editingModes = new InkEditingModes();
+
+        public DataContext()
         {
             InitializeComponent();
+            this.DataContext = editingModes;
+        }
+
+        private void ButtonSelect_Click(object sender, RoutedEventArgs e)
+        {
+            editingModes.EditingMode = InkCanvasEditingMode.Select;
+        }
+
+        private void ButtonDraw_Click(object sender, RoutedEventArgs e)
+        {
+            editingModes.EditingMode = InkCanvasEditingMode.Ink;
         }
     }
 }

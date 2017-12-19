@@ -45,7 +45,7 @@ namespace WPF_Learning
 
         private void Eventy_i_delegaty_Click(object sender, RoutedEventArgs e)
         {
-            var delegatyWin = new EventyDelegatyWindow();
+            var delegatyWin = new DataContext();
             delegatyWin.Show();
         }
 
