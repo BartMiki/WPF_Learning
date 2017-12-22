@@ -19,22 +19,24 @@ namespace WPF_Learning
     /// </summary>
     public partial class DataContext : Window
     {
-        private InkEditingModes editingModes = new InkEditingModes();
+        // private InkEditingModes editingModes = new InkEditingModes();
 
         public DataContext()
         {
             InitializeComponent();
-            this.DataContext = editingModes;
+            // this.DataContext = editingModes;
         }
 
         private void ButtonSelect_Click(object sender, RoutedEventArgs e)
         {
-            editingModes.EditingMode = InkCanvasEditingMode.Select;
+            // editingModes.EditingMode = InkCanvasEditingMode.Select;
+            (Application.Current.Resources["editingModes"] as InkEditingModes).EditingMode = InkCanvasEditingMode.Select;
         }
 
         private void ButtonDraw_Click(object sender, RoutedEventArgs e)
         {
-            editingModes.EditingMode = InkCanvasEditingMode.Ink;
+            // editingModes.EditingMode = InkCanvasEditingMode.Ink;
+            (Application.Current.Resources["editingModes"] as InkEditingModes).EditingMode = InkCanvasEditingMode.Ink;
         }
     }
 }

@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:WPF_Learning"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- to poniżej oznacza var editingModes = new InkEditingModes();-->
+        <local:InkEditingModes x:Key="editingModes" EditingMode="Ink"/>
     </Application.Resources>
 </Application>

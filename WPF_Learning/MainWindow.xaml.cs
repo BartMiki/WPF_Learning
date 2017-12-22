@@ -58,5 +58,11 @@ namespace WPF_Learning
         {
             writeToIt.Text = "";
         }
+
+        private void AnkietaButton_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new Ankieta();
+            window.Show();
+        }
     }
 }

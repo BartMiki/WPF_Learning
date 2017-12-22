@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Ankieta.xaml.cs">
+      <DependentUpon>Ankieta.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CirclesWindow.xaml.cs">
       <DependentUpon>CirclesWindow.xaml</DependentUpon>
     </Compile>
@@ -64,6 +67,10 @@
     <Compile Include="Stack_Wrap_Window.xaml.cs">
       <DependentUpon>Stack_Wrap_Window.xaml</DependentUpon>
     </Compile>
+    <Page Include="Ankieta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CalculatorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

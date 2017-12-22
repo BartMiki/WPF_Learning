@@ -21,6 +21,7 @@
                 <Button x:Name="Eventy_i_delegaty" Margin="10" Click="Eventy_i_delegaty_Click">
                     DataContext
                 </Button>
+                <Button x:Name="AnkietaButton" Margin="10" Click="AnkietaButton_Click">Ankieta</Button>
             </UniformGrid>
             <Expander Margin="5">
                 <Expander.Header>

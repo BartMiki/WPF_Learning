@@ -6,16 +6,19 @@
         xmlns:local="clr-namespace:WPF_Learning"
         mc:Ignorable="d"
         Title="EventyDelegatyWindow" Height="350" Width="500">
+    <Window.Resources>
+
+    </Window.Resources>
     <DockPanel>
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="2">
-            <Button x:Name="ButtonSelect" Margin="2" Padding="2" Click="ButtonSelect_Click">
+            <Button x:Name="ButtonSelect" Click="ButtonSelect_Click">
                 Select    
             </Button>
-            <Button x:Name="ButtonDraw" Margin="2" Padding="2" Click="ButtonDraw_Click">
+            <Button x:Name="ButtonDraw" Click="ButtonDraw_Click">
                 Draw
             </Button>
         </StackPanel>
-        <InkCanvas EditingMode="{Binding Path=EditingMode}">
+        <InkCanvas EditingMode="{Binding Path=EditingMode, Source={StaticResource editingModes}}">
             
         </InkCanvas>
     </DockPanel>

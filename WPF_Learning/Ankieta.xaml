@@ -1,0 +1,49 @@
+﻿<Window x:Class="WPF_Learning.Ankieta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Learning"
+        mc:Ignorable="d"
+        Title="Ankieta" Height="300" Width="300">
+    <StackPanel>
+        <ToggleButton x:Name="AnkietaWidoczna" IsChecked="False">
+            Pokaż ankietę
+        </ToggleButton>
+        <Popup IsOpen="{Binding ElementName=AnkietaWidoczna, Path=IsChecked}" PlacementTarget="{Binding ElementName=AnkietaWidoczna}" AllowsTransparency="True">
+            <StackPanel Margin="5">
+                <GroupBox>
+                    <GroupBox.Header>
+                        <Label FontWeight="Bold">Ile masz lat?</Label>
+                    </GroupBox.Header>
+                    <StackPanel>
+                        <RadioButton>mniej niż 12</RadioButton>
+                        <RadioButton>12-16</RadioButton>
+                        <RadioButton>17-18</RadioButton>
+                        <RadioButton>Powyżej 18</RadioButton>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox>
+                    <GroupBox.Header>
+                        <Label FontWeight="Bold">Ile dziennie śpisz?</Label>
+                    </GroupBox.Header>
+                    <StackPanel>
+                        <RadioButton>mniej niż 4h</RadioButton>
+                        <RadioButton>4-6h</RadioButton>
+                        <RadioButton>6-8h</RadioButton>
+                        <RadioButton x:Name="moreInfo">
+                            <WrapPanel>
+                                <Label>Wiecej:</Label>
+                                <Popup IsOpen="{Binding ElementName=moreInfo, Path=IsChecked}" Placement="Right" AllowsTransparency="True" PopupAnimation="Slide">
+                                    <TextBox MinWidth="50"/>
+                                </Popup>
+                            </WrapPanel>
+                        </RadioButton>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </Popup>
+    </StackPanel>
+    
+</Window>
