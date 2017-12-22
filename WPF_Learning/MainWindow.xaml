@@ -6,22 +6,39 @@
         xmlns:local="clr-namespace:WPF_Learning"
         mc:Ignorable="d"
         Title="My App" Height="350" MinHeight="350" MinWidth="525" Width="525">
+    <Window.Resources>
+        <Style TargetType="{x:Type Expander}">
+            <Setter Property="Foreground" Value="DodgerBlue"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <!-- x:key="ButtonStyle" w ten sposób można przypisywać unikatowe style-->
+            <Setter Property="Background" Value="WhiteSmoke"/>
+            <Setter Property="Margin" Value="0.5"/>
+            <Setter Property="ContentTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Label Content="{Binding}" Foreground="Firebrick" FontStyle="Italic" FontWeight="Bold"/>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel x:Name="mainStackPanel" Background="#474747">
             <UniformGrid Columns="4" Background="{Binding ElementName=mainStackPanel, Path=Background}">
-                <Button x:Name="Kalkulator_button" Margin="10" Click="Kalkulator_button_Click">
+                <Button x:Name="Kalkulator_button" Click="Kalkulator_button_Click">
                     Kalkulator
                 </Button>
-                <Button x:Name="Stac_Wrap_Panel_Button" Margin="10" Click="Stac_Wrap_Panel_Button_Click">
+                <Button x:Name="Stac_Wrap_Panel_Button" Click="Stac_Wrap_Panel_Button_Click">
                     Stack i Wrap Panel
                 </Button>
-                <Button x:Name="Circle_Draw" Margin="10" Click="Circle_Draw_Click">
+                <Button x:Name="Circle_Draw" Click="Circle_Draw_Click">
                     Circle Draw
                 </Button>
-                <Button x:Name="Eventy_i_delegaty" Margin="10" Click="Eventy_i_delegaty_Click">
+                <Button x:Name="Eventy_i_delegaty" Click="Eventy_i_delegaty_Click">
                     DataContext
                 </Button>
-                <Button x:Name="AnkietaButton" Margin="10" Click="AnkietaButton_Click">Ankieta</Button>
+                <Button x:Name="AnkietaButton" Click="AnkietaButton_Click">Ankieta</Button>
             </UniformGrid>
             <Expander Margin="5">
                 <Expander.Header>

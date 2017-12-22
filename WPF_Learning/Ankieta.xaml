@@ -5,16 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Learning"
         mc:Ignorable="d"
-        Title="Ankieta" Height="300" Width="300">
+        Title="Ankieta" Height="300" Width="300"
+        Background="LightGray">
+    <Window.Resources>
+        <Style TargetType="{x:Type GroupBox}">
+            <Setter Property="HeaderTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Label Content="{Binding}" Foreground="Crimson" FontWeight="DemiBold"/>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="DarkRed"/>
+        </Style>
+        <Style TargetType="{x:Type ToggleButton}" x:Key="toggleButtonStyle">
+            <Setter Property="ContentTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Label Content="{Binding}" FontWeight="Bold" Foreground="GhostWhite"/>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="DimGray"/>
+            <Setter Property="Margin" Value="4"/>
+        </Style>
+    </Window.Resources>
     <StackPanel>
         <ToggleButton x:Name="AnkietaWidoczna" IsChecked="False">
-            Pokaż ankietę
+            <ToggleButton.Style>
+                <Style TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource toggleButtonStyle}">
+                    <Style.Triggers>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="Content" Value="Pokaż ankietę"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Content" Value="Ukryj ankietę"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ToggleButton.Style>
         </ToggleButton>
         <Popup IsOpen="{Binding ElementName=AnkietaWidoczna, Path=IsChecked}" PlacementTarget="{Binding ElementName=AnkietaWidoczna}" AllowsTransparency="True">
             <StackPanel Margin="5">
                 <GroupBox>
                     <GroupBox.Header>
-                        <Label FontWeight="Bold">Ile masz lat?</Label>
+                        Ile masz lat?
                     </GroupBox.Header>
                     <StackPanel>
                         <RadioButton>mniej niż 12</RadioButton>
@@ -26,7 +62,7 @@
 
                 <GroupBox>
                     <GroupBox.Header>
-                        <Label FontWeight="Bold">Ile dziennie śpisz?</Label>
+                        Ile dziennie śpisz?
                     </GroupBox.Header>
                     <StackPanel>
                         <RadioButton>mniej niż 4h</RadioButton>
@@ -45,5 +81,5 @@
             </StackPanel>
         </Popup>
     </StackPanel>
-    
+
 </Window>
