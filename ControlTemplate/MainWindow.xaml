@@ -1,0 +1,64 @@
+﻿<Window x:Class="ControlTemplate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControlTemplate"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <ControlTemplate TargetType="{x:Type Button}" x:Key="ButtonTemplate">
+            <Grid>
+                <Ellipse 
+                    Width="{TemplateBinding Width}" 
+                    Height="{TemplateBinding Height}" 
+                    Fill="{TemplateBinding Background}"/>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Ellipse Fill="Black" Width="20" Height="20"></Ellipse>
+                    <ContentPresenter Content="{Binding}">
+                        <ContentPresenter.ContentTemplate>
+                            <DataTemplate DataType="local:Person">
+                                <TextBlock Text="{Binding Path=Name}"></TextBlock>
+                            </DataTemplate>
+                        </ContentPresenter.ContentTemplate>
+                    </ContentPresenter>
+                </StackPanel>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseOver}" Value="True"></Condition>
+                        <Condition Binding="{Binding Path=Sex}" Value="Male"></Condition>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Background" Value="Blue"></Setter>
+                </MultiDataTrigger>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseOver}" Value="True"></Condition>
+                        <Condition Binding="{Binding Path=Sex}" Value="Female"></Condition>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Background" Value="Red"></Setter>
+                </MultiDataTrigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <local:Person x:Key="Person1" Name="Bartek" Sex="Male"/>
+        <local:Person x:Key="Person2" Name="Natalia" Sex="Female"/>
+    </Window.Resources>
+    <UniformGrid>
+        <Button Height="100" 
+                Width="{Binding RelativeSource={RelativeSource Self}, Path=Height}"
+                Template="{StaticResource ButtonTemplate}"
+                DataContext="{StaticResource Person1}"
+                Content="{Binding Path=Name}"
+                />
+        <Button Template="{StaticResource ButtonTemplate}"
+                Width ="{Binding RelativeSource={RelativeSource Self}, Path=Height}"
+                Height="100"
+                DataContext="{StaticResource Person2}"
+                Content="{Binding Name}"/>
+        <Button Margin="20">Ten nie ma teplateau</Button>
+        <TextBlock
+            Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Window},Path=Title}">
+        </TextBlock>
+    </UniformGrid>
+</Window>

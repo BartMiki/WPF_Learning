@@ -8,6 +8,7 @@
         Title="Ankieta" Height="300" Width="300"
         Background="LightGray">
     <Window.Resources>
+        <local:BoolVisibilityConverter x:Key="boolVisibilityConverter"/>
         <Style TargetType="{x:Type GroupBox}">
             <Setter Property="HeaderTemplate">
                 <Setter.Value>
@@ -46,40 +47,38 @@
                 </Style>
             </ToggleButton.Style>
         </ToggleButton>
-        <Popup IsOpen="{Binding ElementName=AnkietaWidoczna, Path=IsChecked}" PlacementTarget="{Binding ElementName=AnkietaWidoczna}" AllowsTransparency="True">
-            <StackPanel Margin="5">
-                <GroupBox>
-                    <GroupBox.Header>
-                        Ile masz lat?
-                    </GroupBox.Header>
-                    <StackPanel>
-                        <RadioButton>mniej niż 12</RadioButton>
-                        <RadioButton>12-16</RadioButton>
-                        <RadioButton>17-18</RadioButton>
-                        <RadioButton>Powyżej 18</RadioButton>
-                    </StackPanel>
-                </GroupBox>
+        <StackPanel Margin="10,2" Visibility="{Binding ElementName=AnkietaWidoczna, Path=IsChecked, Converter={StaticResource boolVisibilityConverter}}">
+            <GroupBox>
+                <GroupBox.Header>
+                    Ile masz lat?
+                </GroupBox.Header>
+                <StackPanel>
+                    <RadioButton>mniej niż 12</RadioButton>
+                    <RadioButton>12-16</RadioButton>
+                    <RadioButton>17-18</RadioButton>
+                    <RadioButton>Powyżej 18</RadioButton>
+                </StackPanel>
+            </GroupBox>
 
-                <GroupBox>
-                    <GroupBox.Header>
-                        Ile dziennie śpisz?
-                    </GroupBox.Header>
-                    <StackPanel>
-                        <RadioButton>mniej niż 4h</RadioButton>
-                        <RadioButton>4-6h</RadioButton>
-                        <RadioButton>6-8h</RadioButton>
-                        <RadioButton x:Name="moreInfo">
-                            <WrapPanel>
-                                <Label>Wiecej:</Label>
-                                <Popup IsOpen="{Binding ElementName=moreInfo, Path=IsChecked}" Placement="Right" AllowsTransparency="True" PopupAnimation="Slide">
-                                    <TextBox MinWidth="50"/>
-                                </Popup>
-                            </WrapPanel>
-                        </RadioButton>
-                    </StackPanel>
-                </GroupBox>
-            </StackPanel>
-        </Popup>
+            <GroupBox>
+                <GroupBox.Header>
+                    Ile dziennie śpisz?
+                </GroupBox.Header>
+                <StackPanel>
+                    <RadioButton>mniej niż 4h</RadioButton>
+                    <RadioButton>4-6h</RadioButton>
+                    <RadioButton>6-8h</RadioButton>
+                    <RadioButton x:Name="moreInfo">
+                        <WrapPanel>
+                            <Label>Wiecej:</Label>
+                            <Popup IsOpen="{Binding ElementName=moreInfo, Path=IsChecked}" Placement="Right" AllowsTransparency="True" PopupAnimation="Slide">
+                                <TextBox MinWidth="50"/>
+                            </Popup>
+                        </WrapPanel>
+                    </RadioButton>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
     </StackPanel>
 
 </Window>

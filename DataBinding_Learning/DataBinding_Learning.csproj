@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{302A6D18-121D-4CFB-B386-3D074BA2E143}</ProjectGuid>
+    <ProjectGuid>{69BC14C5-303D-417D-A592-E633FBE0498A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WPF_Learning</RootNamespace>
-    <AssemblyName>WPF_Learning</AssemblyName>
+    <RootNamespace>DataBinding_Learning</RootNamespace>
+    <AssemblyName>DataBinding_Learning</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,36 +54,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Ankieta.xaml.cs">
-      <DependentUpon>Ankieta.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="BoolVisibilityConverter.cs" />
-    <Compile Include="CirclesWindow.xaml.cs">
-      <DependentUpon>CirclesWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DataContext.xaml.cs">
-      <DependentUpon>DataContext.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="InkEditingModes.cs" />
-    <Compile Include="Stack_Wrap_Window.xaml.cs">
-      <DependentUpon>Stack_Wrap_Window.xaml</DependentUpon>
-    </Compile>
-    <Page Include="Ankieta.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CalculatorWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CirclesWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DataContext.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -92,19 +62,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CalculatorWindow.xaml.cs">
-      <DependentUpon>CalculatorWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Stack_Wrap_Window.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -130,6 +94,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

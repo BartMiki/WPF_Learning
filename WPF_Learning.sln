@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Learning", "WPF_Learnin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_Event_Delegate", "Console_Event_Delegate\Console_Event_Delegate.csproj", "{8FA3EE43-45CF-497B-8F7B-771F62F1D548}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding_Learning", "DataBinding_Learning\DataBinding_Learning.csproj", "{69BC14C5-303D-417D-A592-E633FBE0498A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlTemplate", "ControlTemplate\ControlTemplate.csproj", "{7B080C11-A7B9-43F3-B17C-817111E5914F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservableColection_ListBox", "ObservableColection_ListBox\ObservableColection_ListBox.csproj", "{AC5F7747-315F-422A-94BC-D807224DE766}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,18 @@ Global
 		{8FA3EE43-45CF-497B-8F7B-771F62F1D548}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FA3EE43-45CF-497B-8F7B-771F62F1D548}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FA3EE43-45CF-497B-8F7B-771F62F1D548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69BC14C5-303D-417D-A592-E633FBE0498A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69BC14C5-303D-417D-A592-E633FBE0498A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69BC14C5-303D-417D-A592-E633FBE0498A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69BC14C5-303D-417D-A592-E633FBE0498A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B080C11-A7B9-43F3-B17C-817111E5914F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B080C11-A7B9-43F3-B17C-817111E5914F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B080C11-A7B9-43F3-B17C-817111E5914F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B080C11-A7B9-43F3-B17C-817111E5914F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC5F7747-315F-422A-94BC-D807224DE766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC5F7747-315F-422A-94BC-D807224DE766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC5F7747-315F-422A-94BC-D807224DE766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC5F7747-315F-422A-94BC-D807224DE766}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
